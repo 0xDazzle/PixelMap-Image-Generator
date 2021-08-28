@@ -134,11 +134,11 @@ export default function ImageDisplay(props: any) {
             }}
           >
           </div>
-          <img className="block relative w-full h-auto z-10" src={resizedImage} alt="Pixelmap" />
+          <img className="block relative w-full h-auto z-10 pixel-image" src={resizedImage} alt="Pixelmap" />
         </div>
         <div>
           <p className="text-sm text-gray-800 mb-4">Actual size</p>
-          <img className="block w-auto h-auto mx-auto" src={resizedImage} alt="Pixelmap" />
+          <img className="block w-auto h-auto mx-auto pixel-image" src={resizedImage} alt="Pixelmap" />
         </div>
       </div>
 
