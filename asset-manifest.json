@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/PixelMap-Image-Generator/static/css/main.4080e314.chunk.css",
+    "main.js": "/PixelMap-Image-Generator/static/js/main.42de3df2.chunk.js",
+    "main.js.map": "/PixelMap-Image-Generator/static/js/main.42de3df2.chunk.js.map",
+    "runtime-main.js": "/PixelMap-Image-Generator/static/js/runtime-main.972147b6.js",
+    "runtime-main.js.map": "/PixelMap-Image-Generator/static/js/runtime-main.972147b6.js.map",
+    "static/js/2.ae3fc704.chunk.js": "/PixelMap-Image-Generator/static/js/2.ae3fc704.chunk.js",
+    "static/js/2.ae3fc704.chunk.js.map": "/PixelMap-Image-Generator/static/js/2.ae3fc704.chunk.js.map",
+    "index.html": "/PixelMap-Image-Generator/index.html",
+    "static/css/main.4080e314.chunk.css.map": "/PixelMap-Image-Generator/static/css/main.4080e314.chunk.css.map",
+    "static/js/2.ae3fc704.chunk.js.LICENSE.txt": "/PixelMap-Image-Generator/static/js/2.ae3fc704.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.972147b6.js",
+    "static/js/2.ae3fc704.chunk.js",
+    "static/css/main.4080e314.chunk.css",
+    "static/js/main.42de3df2.chunk.js"
+  ]
+}
