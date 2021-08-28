@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-import placeholder from '../images/artcase.svg';
-
 import ImageUpload from "./ImageUpload";
 import GridSelect from "./GridSelect";
 import ImageDisplay from "./ImageDisplay";
 
 export default function Home() {
-  const [img, setImg] = useState(placeholder);
+  const [img, setImg] = useState();
 
   const [{col, row}, setGrid] = useState({
     col: 1,
