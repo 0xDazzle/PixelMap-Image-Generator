@@ -5,7 +5,7 @@ import "./css/ImageDisplay.scss";
 import Resizer from "../utils/ImageResizer";
 import TileCode from "./TileCode";
 
-import { rgbToWebsafeHex, dimensionToPixels } from "../utils/ImageUtils";
+import { generateWebSafeImage, rgbToWebsafeHex, dimensionToPixels } from "../utils/ImageUtils";
 
 export default function ImageDisplay(props: any) {
   const [resizedImage, setResizedImage] = useState<any>();
@@ -25,33 +25,6 @@ export default function ImageDisplay(props: any) {
     }
     
     return colorArray;
-  }
-
-  function generateWebSafeImage(width: number, height: number) {
-    let canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-
-    let ctx = canvas.getContext('2d');
-    if( !ctx ) return;
-
-    ctx.fillStyle = "rgba(255,255,255,255)";
-    ctx.fillRect(0, 0, width, height);
-
-    let colorIndex = 0;
-
-    for( let y = 0; y < height; y++ ) {
-      for( let x = 0; x < width; x++ ) {
-        if( colorIndex < imageColors.length ) {
-          ctx.fillStyle = `#${imageColors[colorIndex]}`;
-          ctx.fillRect(x, y, 1, 1);
-        }
-
-        colorIndex++;
-      }
-    }
-
-    return canvas.toDataURL(`image/PNG`, 1);
   }
 
   function processTileCode( colorArray: Array<string>, width: number, height: number) {
@@ -117,7 +90,7 @@ export default function ImageDisplay(props: any) {
     const height = dimensionToPixels(props.rows);
     const width = dimensionToPixels(props.cols);
 
-    let websafeImage = generateWebSafeImage(width, height);
+    let websafeImage = generateWebSafeImage(imageColors, width, height);
 
     setResizedImage(websafeImage);
 
@@ -147,7 +120,7 @@ export default function ImageDisplay(props: any) {
 
         <div className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
           {tileCode.map((tile: Array<string>, tileId: number) => (
-            <TileCode key={tileId} id={tileId + 1} code={tile.join('')} />
+            <TileCode key={tileId} id={tileId + 1} code={tile} />
           ))}
         </div>
 

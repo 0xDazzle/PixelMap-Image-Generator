@@ -32,3 +32,30 @@ export function rgbToWebsafeHex(r, g, b) {
    
   return safe.join('');
 }
+
+export function generateWebSafeImage(imageColors, width, height) {
+  let canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+
+  let ctx = canvas.getContext('2d');
+  if( !ctx ) return "";
+
+  ctx.fillStyle = "rgba(255,255,255,255)";
+  ctx.fillRect(0, 0, width, height);
+
+  let colorIndex = 0;
+
+  for( let y = 0; y < height; y++ ) {
+    for( let x = 0; x < width; x++ ) {
+      if( colorIndex < imageColors.length ) {
+        ctx.fillStyle = `#${imageColors[colorIndex]}`;
+        ctx.fillRect(x, y, 1, 1);
+      }
+
+      colorIndex++;
+    }
+  }
+
+  return canvas.toDataURL(`image/PNG`, 1);
+}
