@@ -12,7 +12,7 @@ export default function TileCode(props: any) {
   }
 
   useEffect( () => {
-    setTilePreview( generateWebSafeImage(props.code, 16, 16) );
+    setTilePreview( generateWebSafeImage(props.code.join(''), 16, 16) );
   }, [props.code]);
 
   return (
