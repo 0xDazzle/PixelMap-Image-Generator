@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PixelMap-Image-Generator/static/css/main.5dbcc343.chunk.css",
-    "main.js": "/PixelMap-Image-Generator/static/js/main.7721b836.chunk.js",
-    "main.js.map": "/PixelMap-Image-Generator/static/js/main.7721b836.chunk.js.map",
+    "main.js": "/PixelMap-Image-Generator/static/js/main.9659e0ef.chunk.js",
+    "main.js.map": "/PixelMap-Image-Generator/static/js/main.9659e0ef.chunk.js.map",
     "runtime-main.js": "/PixelMap-Image-Generator/static/js/runtime-main.972147b6.js",
     "runtime-main.js.map": "/PixelMap-Image-Generator/static/js/runtime-main.972147b6.js.map",
     "static/js/2.ae3fc704.chunk.js": "/PixelMap-Image-Generator/static/js/2.ae3fc704.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.972147b6.js",
     "static/js/2.ae3fc704.chunk.js",
     "static/css/main.5dbcc343.chunk.css",
-    "static/js/main.7721b836.chunk.js"
+    "static/js/main.9659e0ef.chunk.js"
   ]
 }
