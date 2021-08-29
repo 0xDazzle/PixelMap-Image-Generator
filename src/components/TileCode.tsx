@@ -7,12 +7,12 @@ export default function TileCode(props: any) {
   const [tilePreview, setTilePreview] = useState("");
 
   const copyCode = () => {
-    navigator.clipboard.writeText(props.code)
+    navigator.clipboard.writeText(props.code.join(''))
     setCopied(true);
   }
 
   useEffect( () => {
-    setTilePreview( generateWebSafeImage(props.code.join(''), 16, 16) );
+    setTilePreview( generateWebSafeImage(props.code, 16, 16) );
   }, [props.code]);
 
   return (
